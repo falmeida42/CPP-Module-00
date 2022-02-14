@@ -4,37 +4,31 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 class   Contact {
 
-    public:
+    private: 
+    std::string    firstName;
+    std::string    lastName;
+    std::string    nickName;
+    std::string    darkestSecret;
+    std::string    phoneNumber;
 
-    string  test;
-    char    firstName[512];
-    char    lastName[512];
-    char    nickName[512];
-    char    darkestSecret[512];    
-    int     phoneNumber;
-    
+    std::string formatContact(std::string str);
+
+    public:
+    Contact addContact(void);
+    void    printContacts(Contact contact);
 };
 
-class   PhoneBook{
+class   PhoneBook {
     
     private:
-        class Contact contactlist[8];
-        
+    Contact contactList[7];
+
 
     public:
-        
-        char    prompt[512];
-        int    FindLimit(char str[]);
-        Contact ADD(void) const;
-        void    SEARCH(int i);
-        PhoneBook(void);
-        ~PhoneBook(void);
-        
-    
+    void fillContacts();
+    void searchContact();
+    std::string  input;
 };
-
 #endif
