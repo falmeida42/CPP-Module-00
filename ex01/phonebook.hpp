@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <iomanip> 
 
 class   Contact {
 
@@ -16,7 +17,6 @@ class   Contact {
     std::string formatContact(std::string str);
 
     public:
-    std::string interateChar(std::string str, char c, int len);
     Contact addContact(void);
     void    printContacts(Contact contact);
 };
