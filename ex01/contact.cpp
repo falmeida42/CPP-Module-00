@@ -39,3 +39,12 @@ void    Contact::printContacts(Contact contact) {
     std::cout << formatContact(contact.nickName);
     std::cout << std::endl;
 }
+
+void    Contact::showSelectedContact(Contact contact) {
+    
+    std::cout << "First Name: " << contact.firstName << std::endl;
+    std::cout << "Last Name: " << contact.lastName << std::endl;
+    std::cout << "Nick Name: " << contact.nickName << std::endl;
+    std::cout << "Dark Secret: " << contact.darkestSecret << std::endl;
+    std::cout << "Phone Number: " << contact.phoneNumber << std::endl;
+}
