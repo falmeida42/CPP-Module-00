@@ -22,11 +22,26 @@ Contact Contact::addContact(void) {
     return (instance);
 }
 
+std::string    Contact::interateChar(std::string str, const char c, int len)
+{
+    std::string result;
+
+    result.insert(0, " ", 0, str.length() - len);
+    std::cout << "|" << result << "|" << std::endl;
+    return (result);
+}
+
 std::string    Contact::formatContact(std::string str)
 {
+    std::string space;
+
     if (str.length() > 10)
         str.replace(9, str.length() - 9, ".");
     else
+    {
+        interateChar(str, " ", 10);
+        str.replace(str.length(), str.length() - 10, space);
+    }
     return (str);
 }
 
