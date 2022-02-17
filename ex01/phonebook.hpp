@@ -17,17 +17,21 @@ class   Contact {
     std::string formatContact(std::string str);
 
     public:
-    void    showSelectedContact(Contact contact);
     Contact addContact(void);
-    void    printContacts(Contact contact);
+    void    getContact(Contact contact);
+    void    getContactList(Contact contact);
+    int     isEmpty(Contact contact);
 };
 
 class   PhoneBook {
     
     private:
-    Contact contactList[7];
+    Contact contactList[8];
     std::string selection;
 
+    
+    int findId(std::string str);
+    
     public:
     void showContact(void);
     void fillContacts();

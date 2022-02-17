@@ -30,7 +30,7 @@ std::string    Contact::formatContact(std::string str)
     return (str);
 }
 
-void    Contact::printContacts(Contact contact) {
+void    Contact::getContactList(Contact contact) {
     
     std::cout << formatContact(contact.firstName);
     std::cout << "|";
@@ -40,11 +40,16 @@ void    Contact::printContacts(Contact contact) {
     std::cout << std::endl;
 }
 
-void    Contact::showSelectedContact(Contact contact) {
-    
+void    Contact::getContact(Contact contact) {
+
     std::cout << "First Name: " << contact.firstName << std::endl;
     std::cout << "Last Name: " << contact.lastName << std::endl;
     std::cout << "Nick Name: " << contact.nickName << std::endl;
     std::cout << "Dark Secret: " << contact.darkestSecret << std::endl;
     std::cout << "Phone Number: " << contact.phoneNumber << std::endl;
+}
+
+int Contact::isEmpty(Contact contact)
+{
+    return (contact.firstName.empty());
 }
