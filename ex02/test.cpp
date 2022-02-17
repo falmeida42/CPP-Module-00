@@ -29,33 +29,19 @@ int		main( void ) {
 	accounts_t::iterator	acc_end		= accounts.end();
 
 	
-
-	std::cout << std::endl;
 	int	const			d[]			= { 5, 765, 564, 2, 87, 23, 9, 20 };
-
-	std::cout << "first d[]: " << d[0] << std::endl;
 	size_t const		d_size( sizeof(d) / sizeof(int) );
-
-	std::cout << "d size: " << d_size << std::endl;
 	ints_t				deposits( d, d + d_size );
 	ints_t::iterator	dep_begin;	
 	ints_t::iterator	dep_end		= deposits.end();
-
-	for (dep_begin = deposits.begin(); dep_begin != dep_end; dep_begin++) {
-		std::cout << "vector d: " << *dep_begin << std::endl;
-	}
-
-	std:: cout << std::endl;
 	int	const			w[]			= { 321, 34, 657, 4, 76, 275, 657, 7654 };
 	size_t const		w_size( sizeof(w) / sizeof(int) );
 	ints_t				withdrawals( w, w + w_size );
 	ints_t::iterator	wit_begin	= withdrawals.begin();
 	ints_t::iterator	wit_end		= withdrawals.end();
 
-	while (wit_begin != wit_end)
-		std::cout << "vector w: " << *wit_begin++ << std::endl;
 	Account::displayAccountsInfos();
-	// std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) );
+	//std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) );
 
 	// for ( acc_int_t it( acc_begin, dep_begin );
 	// 	  it.first != acc_end && it.second != dep_end;
