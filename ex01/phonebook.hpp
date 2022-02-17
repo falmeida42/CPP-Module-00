@@ -30,7 +30,7 @@ class   PhoneBook {
     std::string selection;
 
     
-    int findId(std::string str);
+    int findId(std::string selection);
     
     public:
     void showContact(void);
