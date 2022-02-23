@@ -31,9 +31,9 @@ int PhoneBook::findId(std::string selection)
 
     std::string str;
     i = 0;
-    str = std::to_string(i);
     while (i < 8)
     {
+        str = std::to_string(i);
         if (selection.compare(str) == 0)
             return (1);
         i++;        

@@ -1,6 +1,6 @@
-NAME =	account
+NAME =	phonebook
 
-SRC =	Account.cpp test.cpp
+SRC =	phonebook.cpp contact.cpp main.cpp
 
 CC =	g++ -std=c++98 -Wall -Wextra -Werror
 
@@ -16,4 +16,3 @@ fclean: clean
 	/bin/rm -rf $(NAME)
 
 re: fclean all
-	

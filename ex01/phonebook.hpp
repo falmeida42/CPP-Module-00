@@ -28,8 +28,6 @@ class   PhoneBook {
     private:
     Contact contactList[8];
     std::string selection;
-
-    
     int findId(std::string selection);
     
     public:
